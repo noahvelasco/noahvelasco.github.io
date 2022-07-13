@@ -240,8 +240,8 @@ Table used from below:
 .wrapper {
   font-family: MontLight;
   width:100%;
-  max-width:1500px;
-  margin:20px auto 100px auto;
+  max-width:75%;
+  margin:5% auto 10% auto;
   padding:0;
   background:black;
   color:white;
