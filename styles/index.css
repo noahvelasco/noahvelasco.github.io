@@ -166,7 +166,6 @@ div{
 }
 
 /*************** about me ****************/
-
 #about-me{
   background-image: linear-gradient(#a6a6a6, #0d0d0d);
 }
@@ -208,9 +207,6 @@ div{
 }
 
 /*************** my work ****************/
-
-
-
 #my-work{
   background-image: linear-gradient(#0d0d0d,#0d0d0d,deepskyblue);
 }
@@ -270,12 +266,6 @@ Table used from below:
   display:inline-block;
   width:20%;
   box-sizing:border-box;
-  @media only screen and (max-width:767px) and (min-width:480px) {
-    body{font-size:13px;}
-  }
-  @media only screen and (max-width:479px) {
-    body{font-size:13px;}
-  }
 }
 
 .title ul li {
@@ -300,12 +290,6 @@ Table used from below:
 .row:hover {
   background-color:darkslategrey;
   height:80px;
-  @media only screen and (max-width : 767px) {
-    body{height:85px;}
-  }
-  @media only screen and (max-width : 359px) {
-    body{height:105px;}
-  }
 }
 .title {
   padding:25px 0 5px 0;
@@ -331,9 +315,7 @@ ul.more-content li {
   height: 50px;
   width: 100%;
   color: white;
-  @media only screen and (max-width:767px) {
-    body{font-size:11px;}
-  }
+
 }
 
 
