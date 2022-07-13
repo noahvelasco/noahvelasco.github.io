@@ -37,11 +37,12 @@ Nav Bar Credit:
  */
 
 .navMenu {
-  background-color: rgba(115, 115, 115,20%);
+  background-color: rgba(115, 115, 115,30%);
   position: fixed;
-  float: top;
-  -webkit-transform: translate(0%, 0%);
-  transform: translate(0%, 0%);
+  /*float: top;*/
+  /*margin: 0px 500px 0px 0px;*/
+  -webkit-transform: translate(0%, 210%);
+  transform: translate(0%, 210%);
 }
 
 .navMenu a {
@@ -107,6 +108,11 @@ body, html {
   font-family: MontLight;
   height: 100%;
   margin:0px; /*removes the white borders from the side */
+}
+
+i:hover {
+  transform: scale(1.5) ;
+  transition: all 0.3s linear;
 }
 
 div{
@@ -266,10 +272,10 @@ Table used from below:
   width:20%;
   box-sizing:border-box;
   @media only screen and (max-width:767px) and (min-width:480px) {
-    font-size:13px;
+    body{font-size:13px;}
   }
   @media only screen and (max-width:479px) {
-    font-size:13px;
+    body{font-size:13px;}
   }
 }
 
