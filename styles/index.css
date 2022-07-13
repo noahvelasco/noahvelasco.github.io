@@ -272,6 +272,7 @@ Table used from below:
   font-size: large;
   font-weight: bolder;
   padding:15px 15px;
+
 }
 .row ul li {
   padding:5px 10px;
@@ -293,7 +294,7 @@ Table used from below:
 }
 .title {
   padding:25px 0 5px 0;
-  height:45px;
+  height:10%;
   font-size:0px;
   background-color:gray;
 
