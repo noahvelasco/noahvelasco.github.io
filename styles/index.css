@@ -27,11 +27,82 @@ TODO:
 
 /*************** main screen ****************/
 
+/*
+
+Nav Bar Credit:
+ - https://freefrontend.com/css-menu/
+ - https://codepen.io/WhisnuYs/pen/XWdpdGP
+ */
+
+.navMenu {
+  background-color: rgba(115, 115, 115,20%);
+  position: fixed;
+  float: top;
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  padding: 14px 16px;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: deepskyblue;
+}
+
+/*
+This shows where the dots initial position starts when hovering
+ */
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: deepskyblue;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(0px,0px);
+  transform: translate(0px,0px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translate(100px,-155px);
+  transform: translate(100px,-155px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translate(100px,-90px);
+  transform: translate(100px,-90px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translate(100px,-30px);
+  transform: translate(100px,-30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
 body, html {
   scroll-behavior: smooth;
   background-color: #a6a6a6;
   color: #FFFFFF;
-  font-family: Skyer;
+  font-family: MontLight;
   height: 100%;
   margin:0px; /*removes the white borders from the side */
 }
@@ -132,7 +203,7 @@ div{
 /*************** my work ****************/
 
 #my-work{
-  background-image: linear-gradient(#0d0d0d, deepskyblue,#0d0d0d);
+  background-image: linear-gradient(#0d0d0d, dodgerblue,#0d0d0d);
 }
 
 #my-work-title {
@@ -169,4 +240,7 @@ div{
   border-radius:45px;
   align-content: center;
 }
+
+
+
 
