@@ -173,7 +173,7 @@ div{
 
 #about-me-title {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 10%;
   font-size: 50px;
   font-family: Lombok;
   letter-spacing: 10px;
@@ -202,7 +202,7 @@ div{
   max-width: 20%;
   height: auto;
   width: auto \9;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 65%;
   position: absolute;
 }
@@ -215,11 +215,11 @@ div{
 #my-work-title {
   letter-spacing: 10px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 5%;
   font-size: 50px;
   font-family: Lombok;
   letter-spacing: 10px;
-  text-shadow:20px 20px 20px black;
+  text-shadow:20px 20px 20px gray;
   color: #FFFFFF;
 }
 
