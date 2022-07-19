@@ -319,6 +319,16 @@ ul.more-content li {
   color: white;
 
 }
+div #vid{
+  background-image: linear-gradient(deepskyblue,#0d0d0d,#0d0d0d);
+}
+video{
+  width: 60%;
+  height: auto;
+  margin-left: 20%;
+  margin-bottom: 2%;
+}
+
 
 
 
