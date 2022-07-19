@@ -238,7 +238,7 @@ Table used from below:
   font-family: MontLight;
   width:100%;
   max-width:75%;
-  margin:5% auto 10% auto;
+  margin:5% auto 2% auto;
   padding:0;
   background:black;
   color:white;
@@ -319,12 +319,23 @@ ul.more-content li {
   color: white;
 
 }
+
+#scrollbutton{
+  margin-left: 50%;
+}
+
+#scrollbutton:hover {
+  transform: scale(1.5);
+  transition: all 0.3s linear;
+}
+
 div #vid{
   background-image: linear-gradient(deepskyblue,#0d0d0d,#0d0d0d);
 }
 video{
   width: 60%;
   height: auto;
+  margin-top: 8%;
   margin-left: 20%;
   margin-bottom: 2%;
 }
