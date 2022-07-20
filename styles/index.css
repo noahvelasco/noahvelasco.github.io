@@ -77,7 +77,7 @@ This shows where the dots initial position starts when hovering
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
+/*Nav bar dot animation for "Home"*/
 .navMenu a:nth-child(1):hover ~ .dot {
   -webkit-transform: translate(100px,-155px);
   transform: translate(100px,-155px);
@@ -85,7 +85,7 @@ This shows where the dots initial position starts when hovering
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
-
+/*Nav bar dot animation for "About me"*/
 .navMenu a:nth-child(2):hover ~ .dot {
   -webkit-transform: translate(100px,-90px);
   transform: translate(100px,-90px);
@@ -93,10 +93,10 @@ This shows where the dots initial position starts when hovering
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
-
+/*Nav bar dot animation for "work"*/
 .navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translate(100px,-30px);
-  transform: translate(100px,-30px);
+  -webkit-transform: translate(100px,-29px);
+  transform: translate(100px,-29px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -294,7 +294,8 @@ Table used from below:
   height:80px;
 }
 .title {
-  padding:25px 0 5px 0;
+  padding-top:1%;
+  padding-bottom: 1%;
   height:10%;
   font-size:0px;
   background-color:gray;
@@ -302,7 +303,7 @@ Table used from below:
   /*border-left:3px solid deepskyblue;*/
 }
 .title:hover {
-  height:45px;
+  height:10%;
   background-color:gray;
 }
 
@@ -317,15 +318,25 @@ ul.more-content li {
   height: 50px;
   width: 100%;
   color: white;
-
 }
 
-#scrollbutton{
+#scroll-button-down{
   margin-left: 50%;
 }
 
-#scrollbutton:hover {
+#scroll-button-down:hover {
   transform: scale(1.5);
+  transition: all 0.3s linear;
+}
+
+#scroll-button-up{
+  transform: rotate(180deg);
+  margin-top: 5%;
+  margin-left: 50%;
+}
+
+#scroll-button-up:hover {
+  transform: rotate(180deg) scale(1.5);
   transition: all 0.3s linear;
 }
 
@@ -335,9 +346,9 @@ div #vid{
 video{
   width: 60%;
   height: auto;
-  margin-top: 8%;
+  margin-top: 2%;
   margin-left: 20%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 
