@@ -1,6 +1,6 @@
 /*
 
-Last edit: 7/13/22
+Last edit: 8/14/22
 TODO:
 Make it compatible with mobile devices
 
@@ -162,7 +162,7 @@ div{
   font-size:1vw;
   text-align: center;
   font-family: Lombok;
-  letter-spacing: 10px;
+  letter-spacing: 2vw;
   text-shadow:5px 5px 5px black;
 }
 
