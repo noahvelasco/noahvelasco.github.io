@@ -16,6 +16,7 @@ Make it compatible with mobile devices
     <link rel="icon" href="media/images/NV.ico">
     <link rel="shortcut icon" type="image/x-icon" href="media/images/NV.ico"> <!-- used for github pages -->
     <title>Noah Velasco</title>
+    <link rel="stylesheet" href="styles/index.css">
   </head>
 
   <body>
@@ -23,7 +24,7 @@ Make it compatible with mobile devices
     <a href="#home">Home</a>
     <a href="#about-me">About Me</a>
     <a href="#my-work">Work</a>
-    <div class="dot"></div>
+    <a href="#resume">Resume</a>
   </nav>
   <!-- Where all the content will go. No overlays should be coded here. -->
 
@@ -76,7 +77,6 @@ Make it compatible with mobile devices
             <li>Title</li>
             <li>Status</li>
             <li>Keywords</li>
-            <li>Last Worked On</li>
           </ul>
         </main>
 
@@ -86,10 +86,21 @@ Make it compatible with mobile devices
             <li><a href = "">Campus Base</a></li>
             <li>Developing</li>
             <li>Flutter, Google Maps, Dart</li>
-            <li>8/2022</li>
           </ul>
           <ul class="more-content">
-            <li>A 2 person collaboration project that's goal is to help students navigate on campuses nationally. </li>
+            <li>A 2 person collaboration project that that assists with navigation, school events, and community events. </li>
+          </ul>
+        </article>
+
+        <article class="row item paper">
+          <ul>
+            <li>Academic Paper</li>
+            <li><a href = "">What is the Most...</a></li>
+            <li>Completed</li>
+            <li>Fuzzy Control, Fuzzy Logic</li>
+          </ul>
+          <ul class="more-content">
+            <li>A collaborative academic paper that explores 3 fuzzy control methodologies and explains which is the most adequate.</li>
           </ul>
         </article>
 
@@ -99,27 +110,11 @@ Make it compatible with mobile devices
             <li><a href = "https://scholarworks.utep.edu/cs_techrep/1680/">Shall We Use Log...</a></li>
             <li>Completed</li>
             <li>Fuzzy Control, Mamdani</li>
-            <li>3/2022</li>
           </ul>
           <ul class="more-content">
             <li>A collaborative academic paper that explores 2 fuzzy control methodologies (Logical vs Mamdani) and the tradeoffs they entail.</li>
           </ul>
         </article>
-
-
-        <article class="row item paper">
-          <ul>
-            <li>Academic Paper</li>
-            <li><a href = "https://scholarworks.utep.edu/cs_techrep/1620/">Why Moments...</a></li>
-            <li>Completed</li>
-            <li>Statistics, Decision Making</li>
-            <li>11/2021</li>
-          </ul>
-          <ul class="more-content">
-            <li>A collaborative academic paper that gives a possible explanation as to why moments are used in statistics and expected utility is used in decision-making. </li>
-          </ul>
-        </article>
-
 
         <article class="row item programming">
           <ul>
@@ -127,10 +122,9 @@ Make it compatible with mobile devices
             <li><a href = "https://github.com/noahvelasco/CAN-Bus-Visualizer-Sub-System-Prototype">CAN Bus Visualizer</a></li>
             <li>Completed</li>
             <li>CAN, CAN Bus, Python</li>
-            <li>4/2021</li>
           </ul>
           <ul class="more-content">
-            <li>A collaborative project of 8 devs that is meant to visualize and/or manipulate a CAN Bus System for any SAE-J1939 compliant vehicle.</li>
+            <li>A collaborative prototype project of 8 devs that is meant to visualize and/or manipulate a CAN Bus System for any SAE-J1939 compliant vehicle.</li>
           </ul>
         </article>
 
@@ -140,10 +134,21 @@ Make it compatible with mobile devices
             <li><a href = "https://github.com/noahvelasco/Cross-Platform-Digit-Classifier">Digit Classifier</a></li>
             <li>Completed</li>
             <li>Flutter, ML, Dart</li>
-            <li>12/2021</li>
           </ul>
           <ul class="more-content">
             <li>A collaborative project of 2 devs that created a cross-platform app to identify numerical digits using the MNIST dataset.</li>
+          </ul>
+        </article>
+
+        <article class="row item paper">
+          <ul>
+            <li>Academic Paper</li>
+            <li><a href = "https://scholarworks.utep.edu/cs_techrep/1620/">Why Moments...</a></li>
+            <li>Completed</li>
+            <li>Statistics, Decision Making</li>
+          </ul>
+          <ul class="more-content">
+            <li>A collaborative academic paper that gives a possible explanation as to why moments are used in statistics and expected utility is used in decision-making. </li>
           </ul>
         </article>
 
@@ -153,41 +158,20 @@ Make it compatible with mobile devices
             <li><a href = "https://github.com/noahvelasco/Vehicle-Predictor">Vehicle Predictor</a></li>
             <li>Completed</li>
             <li>ML, CV, Python</li>
-            <li>5/2021</li>
           </ul>
           <ul class="more-content">
             <li>A solo computer vision and machine learning project that is able to determine the make and model of a vehicle using the Standford Cars Dataset.</li>
           </ul>
         </article>
 
-
-        <article class="row item programming">
-          <ul>
-            <li>Programming</li>
-            <li><a href = "https://github.com/noahvelasco/Tennis-Tournament-Predictor">Tennis Match Predictor</a></li>
-            <li>Incomplete</li>
-            <li>ML, Python</li>
-            <li>12/2020</li>
-          </ul>
-          <ul class="more-content">
-            <li>A solo machine learning project that was intended to predict a professional tennis mens match outcome.</li>
-          </ul>
-        </article>
       </section>
-      <a href="#vid"><img id="scroll-button-down" src="media/images/scroll-down.png" alt="scroll down button"></a>
     </div><!-- my-work -->
-
-    <div id = "vid">
-      <a href="#my-work"><img id="scroll-button-up" src="media/images/scroll-down.png" alt="scroll down button"></a>
-      <video controls>
-        <source src="media/videos/VideoPart.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p style="margin-left: 20%">Song Credits: <strong>Lil Peep - Better Off (Dying) Instrumental</strong></p>
+    <div id="resume">
+      <h2 id = "resume-title">RESUME</h2>
+      <embed id="resume-content" src="media/docs/NoahVelasco_Aug2022_Resume.pdf" height="70%" width="50%"/>
     </div>
 
   </div>
   <!-- End of main -->
-
   </body>
 </html>

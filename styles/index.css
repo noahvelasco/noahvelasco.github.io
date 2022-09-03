@@ -41,8 +41,8 @@ Nav Bar Credit:
   background-color: rgba(115, 115, 115,0%);
   position: fixed;
   /*margin: 5vw 0vw 0vw 0vw;*/
-  -webkit-transform: translate(0vw, 25vw);
-  transform: translate(0vw, 25vw);
+  -webkit-transform: translate(0vw, 42vh);
+  transform: translate(0vw, 42vh);
 }
 
 .navMenu a {
@@ -62,44 +62,6 @@ Nav Bar Credit:
   color: deepskyblue;
 }
 
-/*
-This shows where the dots initial position starts when hovering
- */
-.navMenu .dot {
-  width: .4vw;
-  height: .4vw;
-  background: deepskyblue;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translate(0vw,0vw);
-  transform: translate(0vw,0vw);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-/*Nav bar dot animation for "Home"*/
-.navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translate(5vw,-8.3vw);
-  transform: translate(5vw,-8.3vw);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-/*Nav bar dot animation for "About me"*/
-.navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translate(7.2vw,-5vw);
-  transform: translate(7.2vw,-5vw);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
-/*Nav bar dot animation for "work"*/
-.navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translate(5vw,-1.8vw);
-  transform: translate(5vw,-1.8vw);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
-}
 
 body, html {
   scroll-behavior: smooth;
@@ -210,7 +172,7 @@ div{
 
 #my-work-title {
   letter-spacing: 1vw;
-  text-align: center;
+  margin-left: 45vw;
   margin-top: 5%;
   font-size: 3vw;
   font-family: Lombok;
@@ -232,8 +194,8 @@ Table used from below:
 /* wrapper */
 .wrapper {
   font-family: MontLight;
-  max-width:75vw;
-  margin:1vw auto 1vw 15vw;
+  max-width:60vw;
+  margin:1vw auto 1vw 23vw;
   background:black;
   color:white;
   overflow:hidden;
@@ -269,9 +231,7 @@ Table used from below:
   padding:1vw 1vw;
 
 }
-.row ul li {
-  padding:0vw 0vw;
-}
+
 
 /* rows */
 .row {
@@ -311,38 +271,25 @@ ul.more-content li {
   color: white;
 }
 
-#scroll-button-down{
-  margin-top: 1vw;
-  margin-left: 50vw;
+#resume{
+  background-image: linear-gradient(deepskyblue,#0d0d0d);
 }
 
-#scroll-button-down:hover {
-  transform: scale(1.5);
-  transition: all 0.3s linear;
-}
-
-#scroll-button-up{
-  transform: rotate(180deg);
+#resume-title {
+  letter-spacing: 1vw;
+  margin-left: 45vw;
   margin-top: 5%;
-  margin-left: 53vw;
+  font-size: 3vw;
+  font-family: Lombok;
+  letter-spacing: 1vw;
+  text-shadow:20px 20px 20px black;
+  color: #FFFFFF;
 }
 
-#scroll-button-up:hover {
-  transform: rotate(180deg) scale(1.5);
-  transition: all 0.3s linear;
-}
-
-div #vid{
-  background-image: linear-gradient(deepskyblue,#0d0d0d,#0d0d0d);
-}
-video{
-  width: 65vw;
-  height: auto;
+#resume-content{
   margin-top: 1vw;
-  margin-left: 20vw;
-  margin-bottom: 1vw;
+  margin-left: 30%;
 }
-
 
 
 
