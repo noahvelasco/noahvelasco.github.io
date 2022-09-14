@@ -187,8 +187,8 @@ Table used from below:
  */
 
 .item a {text-decoration:none;transition: color 0.2s ease-out;}
-.item a {color:white;}
-.item a:hover {color:greenyellow;}
+.item a {color:deepskyblue;}
+.item a:hover {color:dodgerblue;}
 
 
 /* wrapper */
