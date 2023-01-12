@@ -1,20 +1,8 @@
 /*
 
-Last edit: 8/14/22
-TODO:
-Make it compatible with mobile devices
+Last edit: 1/12/2023
 
  */
-
-@font-face {
-  font-family: MontLight;
-  src: url(fonts/Montserrat/Montserrat-Light.ttf);
-}
-
-@font-face {
-  font-family: MontLightItalic;
-  src: url(fonts/Montserrat/Montserrat-LightItalic.ttf);
-}
 
 @font-face {
   font-family: Skyer;
@@ -26,48 +14,12 @@ Make it compatible with mobile devices
   src: url(fonts/lombok/Lombok.otf);
 }
 
-
-
 /*************** main screen ****************/
-
-/*
-
-Nav Bar Credit:
- - https://freefrontend.com/css-menu/
- - https://codepen.io/WhisnuYs/pen/XWdpdGP
- */
-
-.navMenu {
-  background-color: rgba(115, 115, 115,0%);
-  position: fixed;
-  /*margin: 5vw 0vw 0vw 0vw;*/
-  -webkit-transform: translate(0vw, 42vh);
-  transform: translate(0vw, 42vh);
-}
-
-.navMenu a {
-  color: #f6f4e6;
-  text-decoration: none;
-  font-size: 1vw;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: flex;
-  padding: 1vw; /* TB RL */
-  /*width: 80px;*/
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navMenu a:hover {
-  color: deepskyblue;
-}
 
 
 body, html {
   scroll-behavior: smooth;
-  background-color: #a6a6a6;
   color: #FFFFFF;
-  font-family: MontLight;
   height: 100%;
   margin:0px; /*removes the white borders from the side */
 }
@@ -82,29 +34,6 @@ div{
   display: flow-root;
 }
 
-.about-me-link:link {
-  color: deepskyblue;
-  background-color: transparent;
-  text-decoration: none;
-  text-shadow:1px 1px 1px black;
-}
-.about-me-link:visited {
-  color: deepskyblue;
-  background-color: transparent;
-  text-decoration: none;
-}
-.about-me-link:hover {
-  color: dodgerblue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-.about-me-link:active {
-  color: lightblue;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-
 /*************** main screen ****************/
 #home{
   scroll-behavior: smooth;
@@ -113,183 +42,43 @@ div{
 
 #home-page-title {
   text-align: center;
-  letter-spacing: 3vw;
-  margin-top: 15vw;
-  font-size:4vw;
   font-family: Lombok;
+  letter-spacing: 2vw;
+  margin-top: 30vh;
+  font-size:7vh;
   text-shadow:1vw 1vw 1vw black;
 }
 
 #home-page-content {
-  font-size:1vw;
   text-align: center;
+  margin-top: 18vh;
   font-family: Lombok;
-  letter-spacing: 1vw;
+  letter-spacing: .5vw;
+  font-size:3vh;
   text-shadow:5px 5px 5px black;
 }
 
-/*************** about me ****************/
-#about-me{
-  background-image: linear-gradient(#a6a6a6, #0d0d0d);
-}
-
-#about-me-title {
-  text-align: center;
-  margin-top: 10%;
-  font-size: 3vw;
-  font-family: Lombok;
-  letter-spacing: 10px;
-  text-shadow:20px 20px 20px black;
-  color: #FFFFFF;
-}
-
-#about-me-description {
-  text-align: left;
-  max-width: 40vw;
-  margin-top: 2vw;
-  margin-left: 10vw;
-  margin-right: 2vw;
-  font-size: 1.2vw;
-  font-family: MontLight;
-  color: #FFFFFF;
-  text-shadow:2px 2px 2px black;
-  position: absolute;
-}
-
-#about-me-image {
-  max-width: 20vw;
-  height: auto;
-  width: auto\9;
-  margin-top: 1vw;
-  margin-left: 65%;
-  position: absolute;
-}
-
-/*************** my work ****************/
-#my-work{
-  background-image: linear-gradient(#0d0d0d,#0d0d0d,deepskyblue);
-}
-
-#my-work-title {
-  letter-spacing: 1vw;
-  margin-left: 45vw;
-  margin-top: 5%;
-  font-size: 3vw;
-  font-family: Lombok;
-  letter-spacing: 1vw;
-  text-shadow:20px 20px 20px gray;
-  color: #FFFFFF;
-}
-
-/*
-Table used from below:
-  - https://codepen.io/ajlohman/pen/GRWYWw
- */
-
-.item a {text-decoration:none;transition: color 0.2s ease-out;}
-.item a {color:deepskyblue;}
-.item a:hover {color:dodgerblue;}
-
-
-/* wrapper */
-.wrapper {
-  font-family: MontLight;
-  max-width:60vw;
-  margin:1vw auto 1vw 23vw;
-  background:black;
-  color:white;
-  overflow:hidden;
-  position:relative;
-}
-
-.programming{
-  border-left:5px solid darkgoldenrod;
-}
-
-.paper{
-  border-left:5px solid maroon;
-}
-
-/* lists */
-.row ul {
-  margin:0;
-  padding:0;
-}
-.row ul li  {
-  margin:0;
-  font-size:1vw;
-  font-weight:normal;
-  list-style:none;
-  display:inline-block;
-  width:14vw;
-  box-sizing:border-box;
-}
-
-.title ul li {
-  font-size: 1vw;
-  font-weight: bolder;
-  padding:1vw 1vw;
-
-}
-
-
-/* rows */
-.row {
-  padding: 1.5vw .5vw;
-  height:1vw;
-  position:relative;
-  overflow:hidden;
-  transition:all 0.2s ease-out;
-  border-top:1px solid white;
-}
-.row:hover {
-  background-color:darkslategrey;
-  height:4.5vw;
-}
-.title {
-  padding-top:1%;
-  padding-bottom: 1%;
-  height:10%;
-  font-size:0vw;
-  background-color:gray;
-
-  /*border-left:3px solid deepskyblue;*/
-}
-.title:hover {
-  height:10%;
-  background-color:gray;
-}
-
-/* more content */
-ul.more-content li {
-  position: relative;
-  font-size: .8vw;
-  margin: 0;
-  padding: 1.5vw 2vw;
-  display: block;
-  width: 100%;
-  color: white;
-}
-
-#resume{
-  background-image: linear-gradient(deepskyblue,#0d0d0d);
-}
-
-#resume-title {
-  letter-spacing: 1vw;
-  margin-left: 45vw;
-  margin-top: 5%;
-  font-size: 3vw;
-  font-family: Lombok;
-  letter-spacing: 1vw;
-  text-shadow:20px 20px 20px black;
-  color: #FFFFFF;
-}
-
-#resume-content{
-  margin-top: 1vw;
-  margin-left: 30%;
-}
+/*#home-page-content:link {*/
+/*  color: deepskyblue;*/
+/*  background-color: transparent;*/
+/*  text-decoration: none;*/
+/*  text-shadow:1px 1px 1px black;*/
+/*}*/
+/*#home-page-content:visited {*/
+/*  color: white;*/
+/*  background-color: transparent;*/
+/*  text-decoration: none;*/
+/*}*/
+/*#home-page-content:hover {*/
+/*  color: dodgerblue;*/
+/*  background-color: transparent;*/
+/*  text-decoration: underline;*/
+/*}*/
+/*#home-page-content:active {*/
+/*  color: lightblue;*/
+/*  background-color: transparent;*/
+/*  text-decoration: underline;*/
+/*}*/
 
 
 
