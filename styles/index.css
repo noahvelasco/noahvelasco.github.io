@@ -76,14 +76,14 @@ img {
   font-family: "Montserrat-Light";
   letter-spacing: .5vw;
   font-size:3vh;
-  text-shadow:5px 5px 5px black;
+  text-shadow:1vw 1vw 1vw black;
 }
 
 .home-page-link:link {
   color: deepskyblue;
   background-color: transparent;
   text-decoration: none;
-  text-shadow:1px 1px 1px black;
+  text-shadow:.5vw .5vw .5vw black;
 }
 .home-page-link:visited {
   color: white;
