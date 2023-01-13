@@ -41,9 +41,7 @@ div{
 .square {
   height: 5vh;
   width: auto;
-  margin-top: 0vh;
-  margin-left: 0vw;
-  background-color: darkgoldenrod;
+  background-color: dodgerblue;
 }
 
 img {
