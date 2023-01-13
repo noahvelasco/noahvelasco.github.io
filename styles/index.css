@@ -4,14 +4,18 @@ Last edit: 1/12/2023
 
  */
 
-@font-face {
-  font-family: Skyer;
-  src: url(fonts/Skyer/Skyer-Regular.otf);
-}
 
 @font-face {
   font-family: lombok;
   src: url(fonts/lombok/Lombok.otf);
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat-Light;
+  src: url(fonts/Montserrat/Montserrat-Light.ttf);
 }
 
 /*************** main screen ****************/
@@ -34,6 +38,23 @@ div{
   display: flow-root;
 }
 
+.square {
+  height: 5vh;
+  width: auto;
+  margin-top: 0vh;
+  margin-left: 0vw;
+  background-color: darkgoldenrod;
+}
+
+img {
+  border-radius: 2%;
+  height:40%;
+  width:auto;
+  margin-top: -15vh;
+  margin-left: 15vw;
+  position: absolute;
+}
+
 /*************** main screen ****************/
 #home{
   scroll-behavior: smooth;
@@ -41,44 +62,46 @@ div{
 }
 
 #home-page-title {
-  text-align: center;
-  font-family: Lombok;
+  text-align: left;
+  font-family: "Montserrat-Bold";
   letter-spacing: 2vw;
-  margin-top: 30vh;
+  margin-top: 25vh;
+  margin-left: 10vw;
   font-size:7vh;
   text-shadow:1vw 1vw 1vw black;
 }
 
 #home-page-content {
-  text-align: center;
-  margin-top: 18vh;
-  font-family: Lombok;
+  text-align: left;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  font-family: "Montserrat-Light";
   letter-spacing: .5vw;
   font-size:3vh;
   text-shadow:5px 5px 5px black;
 }
 
-/*#home-page-content:link {*/
-/*  color: deepskyblue;*/
-/*  background-color: transparent;*/
-/*  text-decoration: none;*/
-/*  text-shadow:1px 1px 1px black;*/
-/*}*/
-/*#home-page-content:visited {*/
-/*  color: white;*/
-/*  background-color: transparent;*/
-/*  text-decoration: none;*/
-/*}*/
-/*#home-page-content:hover {*/
-/*  color: dodgerblue;*/
-/*  background-color: transparent;*/
-/*  text-decoration: underline;*/
-/*}*/
-/*#home-page-content:active {*/
-/*  color: lightblue;*/
-/*  background-color: transparent;*/
-/*  text-decoration: underline;*/
-/*}*/
+.home-page-link:link {
+  color: deepskyblue;
+  background-color: transparent;
+  text-decoration: none;
+  text-shadow:1px 1px 1px black;
+}
+.home-page-link:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.home-page-link:hover {
+  color: dodgerblue;
+  background-color: transparent;
+  /*text-decoration: underline;*/
+}
+.home-page-link:active {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 
 
