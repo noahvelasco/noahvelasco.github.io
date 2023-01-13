@@ -91,14 +91,12 @@ img {
   text-decoration: none;
 }
 .home-page-link:hover {
-  color: dodgerblue;
+  color: deepskyblue;
   background-color: transparent;
-  /*text-decoration: underline;*/
 }
 .home-page-link:active {
   color: lightblue;
   background-color: transparent;
-  text-decoration: underline;
 }
 
 
