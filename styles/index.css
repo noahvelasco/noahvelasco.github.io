@@ -4,18 +4,21 @@ Last edit: 1/12/2023
 
  */
 
-
 @font-face {
-  font-family: lombok;
-  src: url(fonts/lombok/Lombok.otf);
+  font-family: f1;
+  src: url(fonts/Montserrat/Montserrat-Medium.ttf);
 }
 @font-face {
-  font-family: Montserrat-Bold;
-  src: url(fonts/Montserrat/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: Montserrat-Light;
+  font-family: f2;
   src: url(fonts/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: f3;
+  src: url(fonts/futura/futur.ttf);
+}
+@font-face {
+  font-family: f4;
+  src: url(fonts/Helvetica-Font/Helvetica.ttf);
 }
 
 /*************** main screen ****************/
@@ -39,18 +42,11 @@ div{
 }
 
 .square {
-  height: 5vh;
-  width: auto;
+  height: .5vh;
+  width: 50vw;
+  margin-left: 25vw;
+  /*position: sticky;*/
   background-color: dodgerblue;
-}
-
-img {
-  border-radius: 2%;
-  height:40%;
-  width:auto;
-  margin-top: -15vh;
-  margin-left: 15vw;
-  position: absolute;
 }
 
 /*************** main screen ****************/
@@ -60,20 +56,18 @@ img {
 }
 
 #home-page-title {
-  text-align: left;
-  font-family: "Montserrat-Bold";
+  text-align: center;
+  font-family: f3;
   letter-spacing: 2vw;
   margin-top: 25vh;
-  margin-left: 10vw;
   font-size:7vh;
   text-shadow:1vw 1vw 1vw black;
 }
 
 #home-page-content {
-  text-align: left;
-  margin-top: 10vh;
-  margin-left: 10vw;
-  font-family: "Montserrat-Light";
+  text-align: center;
+  margin-top: 6vh;
+  font-family: f2;
   letter-spacing: .5vw;
   font-size:3vh;
   text-shadow:1vw 1vw 1vw black;
