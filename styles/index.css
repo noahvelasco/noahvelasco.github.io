@@ -49,6 +49,17 @@ div{
   background-color: gray;
 }
 
+/*img {*/
+/*  position: absolute;*/
+/*  margin-left: 60vw;*/
+/*  margin-top: 10vw;*/
+/*  border: 2px solid gray;*/
+/*  border-radius: 5%;*/
+/*  padding: 5px;*/
+/*  width: 15%;*/
+/*  height: auto;*/
+/*}*/
+
 /*************** main screen ****************/
 #home{
   scroll-behavior: smooth;
@@ -60,6 +71,7 @@ div{
   font-family: f4;
   letter-spacing: 2vw;
   margin-top: 25vh;
+  /*margin-left: 20vw;*/
   font-size:7vh;
   text-shadow:15px 15px 15px black;
 }
@@ -67,6 +79,7 @@ div{
 #home-page-content {
   text-align: center;
   margin-top: 6vh;
+  /*margin-left: -16vw;*/
   font-family: f2;
   letter-spacing: .5vw;
   font-size:3vh;
@@ -76,8 +89,8 @@ div{
 .home-page-link:link {
   color: white;
   background-color: transparent;
-  text-decoration: none;
   text-shadow:.5vw .5vw .5vw black;
+  text-decoration: none;
 }
 .home-page-link:visited {
   color: white;
@@ -92,7 +105,3 @@ div{
   color: lightblue;
   background-color: transparent;
 }
-
-
-
-
