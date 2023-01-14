@@ -46,7 +46,6 @@ div{
   width: 50vw;
   margin-left: 25vw;
   /*position: sticky;*/
-  /*background-color: dodgerblue;*/
   background-color: gray;
 }
 
@@ -62,7 +61,7 @@ div{
   letter-spacing: 2vw;
   margin-top: 25vh;
   font-size:7vh;
-  text-shadow:1vw 1vw 1vw black;
+  text-shadow:15px 15px 15px black;
 }
 
 #home-page-content {
@@ -71,7 +70,7 @@ div{
   font-family: f2;
   letter-spacing: .5vw;
   font-size:3vh;
-  text-shadow:1vw 1vw 1vw black;
+  text-shadow:5px 5px 5px black;
 }
 
 .home-page-link:link {
