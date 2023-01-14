@@ -14,7 +14,7 @@ Last edit: 1/12/2023
 }
 @font-face {
   font-family: f3;
-  src: url(fonts/futura/futur.ttf);
+  src: url(fonts/futura/Futura-CondensedLight.otf);
 }
 @font-face {
   font-family: f4;
@@ -57,7 +57,7 @@ div{
 
 #home-page-title {
   text-align: center;
-  font-family: f3;
+  font-family: f4;
   letter-spacing: 2vw;
   margin-top: 25vh;
   font-size:7vh;
