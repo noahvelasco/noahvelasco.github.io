@@ -31,9 +31,17 @@ body, html {
   margin:0px; /*removes the white borders from the side */
 }
 
+i{
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+}
+
 i:hover {
-  transform: scale(1.5) ;
-  transition: all 0.3s linear;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+
 }
 
 div{
