@@ -31,22 +31,6 @@ body, html {
   margin:0px; /*removes the white borders from the side */
 }
 
-/*
-'i' element is for the icons at bottom of the page
-*/
-
-i{
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
-}
-
-i:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
 div{
   height:100%;
   display: flow-root;
@@ -77,11 +61,13 @@ div{
 
 #home-page-content {
   text-align: center;
+  justify-content: center;
   margin-top: 6vh;
   font-family: f2;
   letter-spacing: .5vw;
   font-size:3vh;
   text-shadow:5px 5px 5px black;
+  padding-bottom: 10vh;
 }
 
 
@@ -90,8 +76,6 @@ div{
   background-color: transparent;
   text-decoration: none;
 }
-
-
 
 .home-page-link {
   color: white;
@@ -122,3 +106,20 @@ div{
 .home-page-link:hover::before {
   transform: scaleX(1);
 }
+
+/*
+'i' element is for the icons at bottom of the page
+*/
+
+i{
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+}
+
+i:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
