@@ -31,6 +31,10 @@ body, html {
   margin:0px; /*removes the white borders from the side */
 }
 
+/*
+'i' element is for the icons at bottom of the page
+*/
+
 i{
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -41,7 +45,6 @@ i{
 i:hover {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
-
 }
 
 div{
@@ -49,24 +52,13 @@ div{
   display: flow-root;
 }
 
-.square {
+.divider {
   height: .5vh;
   width: 50vw;
   margin-left: 25vw;
   /*position: sticky;*/
   background-color: gray;
 }
-
-/*img {*/
-/*  position: absolute;*/
-/*  margin-left: 60vw;*/
-/*  margin-top: 10vw;*/
-/*  border: 2px solid gray;*/
-/*  border-radius: 5%;*/
-/*  padding: 5px;*/
-/*  width: 15%;*/
-/*  height: auto;*/
-/*}*/
 
 /*************** main screen ****************/
 #home{
@@ -79,7 +71,6 @@ div{
   font-family: f4;
   letter-spacing: 2vw;
   margin-top: 25vh;
-  /*margin-left: 20vw;*/
   font-size:7vh;
   text-shadow:15px 15px 15px black;
 }
@@ -87,29 +78,47 @@ div{
 #home-page-content {
   text-align: center;
   margin-top: 6vh;
-  /*margin-left: -16vw;*/
   font-family: f2;
   letter-spacing: .5vw;
   font-size:3vh;
   text-shadow:5px 5px 5px black;
 }
 
-.home-page-link:link {
-  color: white;
-  background-color: transparent;
-  text-shadow:.5vw .5vw .5vw black;
-  text-decoration: none;
-}
+
 .home-page-link:visited {
   color: white;
   background-color: transparent;
   text-decoration: none;
 }
-.home-page-link:hover {
-  color: deepskyblue;
+
+
+
+.home-page-link {
+  color: white;
   background-color: transparent;
+  text-shadow:.5vw .5vw .5vw black;
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
 }
-.home-page-link:active {
-  color: lightblue;
-  background-color: transparent;
+
+.home-page-link:hover {
+  color: white;
+}
+
+.home-page-link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.home-page-link:hover::before {
+  transform: scaleX(1);
 }
