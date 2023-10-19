@@ -1,17 +1,13 @@
-/*
-
-Last edit: 1/12/2023
-
- */
-
 @font-face {
   font-family: f1;
   src: url(fonts/Montserrat/Montserrat-Medium.ttf);
 }
+
 @font-face {
   font-family: f2;
   src: url(fonts/Montserrat/Montserrat-Light.ttf);
 }
+
 @font-face {
   font-family: f3;
   src: url(fonts/futura/Futura-CondensedLight.otf);
@@ -21,106 +17,90 @@ Last edit: 1/12/2023
   src: url(fonts/Helvetica-Font/Helvetica.ttf);
 }
 
-/*************** main screen ****************/
-
-
-body, html {
-  scroll-behavior: smooth;
-  color: #FFFFFF;
-  height: 100%;
-  margin:0px; /*removes the white borders from the side */
-}
-
-div{
-  height:100%;
-  display: flow-root;
-}
-
-.divider {
-  height: .5vh;
-  width: 50vw;
-  margin-left: 25vw;
-  /*position: sticky;*/
-  background-color: gray;
-}
-
-/*************** main screen ****************/
-#home{
-  scroll-behavior: smooth;
-  background-image: linear-gradient(#0d0d0d, #a6a6a6);
-}
-
-#home-page-title {
-  text-align: center;
-  font-family: f4;
-  letter-spacing: 2vw;
-  margin-top: 25vh;
-  font-size:7vh;
-  text-shadow:15px 15px 15px black;
-}
-
-#home-page-content {
-  text-align: center;
-  justify-content: center;
-  margin-top: 6vh;
-  font-family: f2;
-  letter-spacing: .5vw;
-  font-size:3vh;
-  text-shadow:5px 5px 5px black;
-  padding-bottom: 10vh;
-}
-
-
-.home-page-link:visited {
+body {
+  font-family: f1, f2;
   color: white;
-  background-color: transparent;
-  text-decoration: none;
+  background-color: #1b1b1b;
+  margin: 0; //removes white space
+  padding: 0; //removes white space
+  height: 100vh;
 }
 
-.home-page-link {
-  color: white;
-  background-color: transparent;
-  text-shadow:.5vw .5vw .5vw black;
-  text-decoration: none;
-  position: relative;
-  text-decoration: none;
-}
-
-.home-page-link:hover {
-  color: white;
-}
-
-.home-page-link::before {
-  content: "";
-  position: absolute;
-  display: block;
+.navbar {
+  z-index: 3; /* Set a high z-index value to ensure it stays on top */
+  position: fixed;
+  bottom: 8%;
+  right: 0;
   width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.25),
+    rgba(27, 27, 27, 1)
+  );
+  padding: 0.5%;
+  display: flex;
+  justify-content: center; /* To center-align the links */
+  align-items: center;
+  letter-spacing: 2px;
 }
 
-.home-page-link:hover::before {
-  transform: scaleX(1);
+.navbar a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underlines from links */
+  margin: 0 15px; /* Adjust spacing between links */
 }
 
-/*
-'i' element is for the icons at bottom of the page
-*/
-
-i{
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+.navbar a.active {
+  font-weight: bold; /* Example: Make the text bold */
+  color: #c0a080; /* Example: Change the text color to red */
+  /* Add any other styles you want for the active link */
 }
 
-i:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+/* mouse over link */
+.navbar a:hover {
+  color: #9c715f;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh; /* Set the container height to 100% of the viewport height */
+}
+
+#left-column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /*Center horizontally */
+}
+
+#right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+#title-name {
+  text-align: center;
+  font-size: 5vh;
+  font-family: f2;
+  font-style: italic;
+  letter-spacing: 0.5vw;
+}
+
+#title-mission {
+  text-align: center;
+  font-size: 2vh;
+  font-family: f1;
+  letter-spacing: 0.25vw;
+}
+
+#portrait {
+  max-width: 50%; /* Limit the maximum width to the container's width */
+  height: auto; /* Maintain the image's aspect ratio */
+  filter: grayscale(50%);
+}
