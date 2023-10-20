@@ -65,30 +65,30 @@ body {
   padding: 0.5%;
 }
 
-.navbar a {
-  color: white; /* Link text color */
-  text-decoration: none; /* Remove underlines from links */
-  margin: 0 15px; /* Adjust spacing between links */
+.navbar-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0.5vw;
+
+  font-family: f2;
+  letter-spacing: 2px;
 }
 
-.navbar a.active {
+.navbar-pages a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove underlines from links */
+  margin: 0 1vw; /* Adjust spacing between links */
+}
+
+.navbar-pages a.active {
   font-weight: bold; /* Example: Make the text bold */
   color: #c0a080; /* Example: Change the text color to red */
 }
 
 /* mouse over link */
-.navbar a:hover {
+.navbar-pages a:hover {
   color: #9c715f;
-}
-
-.navbar-pages {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 0.5vwvw;
-
-  font-family: f2;
-  letter-spacing: 2px;
 }
 
 #navbar-icons {
@@ -97,7 +97,7 @@ body {
 }
 
 i {
-  margin: 0vh 0.1vw 0vh;
+  margin: 0vh 1vw 0vh;
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
