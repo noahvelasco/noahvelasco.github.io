@@ -91,7 +91,7 @@ body {
   color: #9c715f;
 }
 
-#navbar-icons {
+.navbar-icons {
   flex-direction: row;
   margin-left: 5vw;
 }
@@ -110,7 +110,7 @@ i:hover {
   transform: scale(1.5);
 }
 
-.content {
+.home {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -173,7 +173,7 @@ i:hover {
     );
   }
 
-  .content {
+  .home {
     display: flex;
     flex-direction: column;
   }
