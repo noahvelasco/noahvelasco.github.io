@@ -1,3 +1,5 @@
+//This file contains both the desktop and mobile css styling for all pages
+
 @font-face {
   font-family: f1;
   src: url(fonts/Montserrat/Montserrat-Medium.ttf);
@@ -17,13 +19,31 @@
   src: url(fonts/Helvetica-Font/Helvetica.ttf);
 }
 
+/* ------------------------------------- DESKTOP ------------------------------------- */
+
 body {
   font-family: f1, f2;
   color: white;
-  background-color: #1b1b1b;
+  /* background-color: #1b1b1b; */
   margin: 0; //removes white space
   padding: 0; //removes white space
   height: 100vh;
+
+  background: linear-gradient(75deg, #6e6e6e, #1b1b1b);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .navbar {
@@ -41,11 +61,13 @@ body {
   display: flex;
   justify-content: center; /* To center-align the links */
   align-items: center;
+  font-family: f2;
   letter-spacing: 2px;
 }
 
 .navbar a {
   color: white; /* Link text color */
+
   text-decoration: none; /* Remove underlines from links */
   margin: 0 15px; /* Adjust spacing between links */
 }
@@ -53,7 +75,6 @@ body {
 .navbar a.active {
   font-weight: bold; /* Example: Make the text bold */
   color: #c0a080; /* Example: Change the text color to red */
-  /* Add any other styles you want for the active link */
 }
 
 /* mouse over link */
@@ -64,43 +85,97 @@ body {
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 100vh; /* Set the container height to 100% of the viewport height */
 }
 
-#left-column {
+#title-section {
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center; /* Center vertically */
-  align-items: center; /*Center horizontally */
-}
-
-#right-column {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  align-items: flex-end; /*Center horizontally */
+  margin-right: 10%;
 }
 
 #title-name {
-  text-align: center;
+  text-align: right;
   font-size: 5vh;
   font-family: f2;
+  text-shadow: 2px 2px 8px #1b1b1b;
   font-style: italic;
   letter-spacing: 0.5vw;
 }
 
 #title-mission {
-  text-align: center;
+  text-align: right;
   font-size: 2vh;
-  font-family: f1;
+  font-family: f2;
+  text-shadow: 2px 2px 8px #1b1b1b;
   letter-spacing: 0.25vw;
+}
+
+#portrait-section {
+  flex: 1;
+  display: flex;
 }
 
 #portrait {
   max-width: 50%; /* Limit the maximum width to the container's width */
   height: auto; /* Maintain the image's aspect ratio */
   filter: grayscale(50%);
+}
+
+/* ------------------------------------- MOBILE ------------------------------------- */
+
+@media (max-width: 1000px) {
+  body {
+    margin: 0; //removes white space
+    padding: 0; //removes white space
+  }
+
+  .navbar {
+    bottom: 5%;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(27, 27, 27, 1)
+    );
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #title-section {
+    margin-right: 0%; //undo the margin created for desktops
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title-name {
+    text-align: center;
+  }
+
+  #title-mission {
+    text-align: center;
+  }
+
+  #portrait-section {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 25%;
+  }
+
+  #portrait {
+    width: 75%; /* Set a specific width for smaller screens */
+    height: auto;
+  }
 }
