@@ -65,6 +65,7 @@ body {
 }
 
 #navbar-pages {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -75,6 +76,7 @@ body {
 #navbar-pages a {
   font-family: f2;
   font-size: 2vh;
+  letter-spacing: 4px;
   color: white; /* Link text color */
   text-decoration: none; /* Remove underlines from links */
   margin: 0 1vw; /* Adjust spacing between links */
@@ -89,15 +91,15 @@ body {
   color: #9c715f;
 }
 
-.navbar-icons {
-  position: absolute;
-  right: 3vw;
+.icons-section {
+  width: 10vw;
+  margin: 2vh 0vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-i {
-  margin: 0vh 1vw 0vh;
+.icons-section a i {
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -105,7 +107,7 @@ i {
   transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
 }
 
-i:hover {
+.icons-section a i:hover {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
 }
@@ -164,18 +166,23 @@ i:hover {
   }
 
   .navbar {
-    height: 8%;
+    height: 8vh;
     bottom: 0%;
     background-image: linear-gradient(
       to left,
       rgba(255, 255, 255, 0.5),
       rgba(27, 27, 27, 0.5),
-      rgba(27, 27, 27, 1)
+      rgba(27, 27, 27, 0.5)
     );
   }
 
+  #navbar-pages {
+    justify-content: space-evenly;
+  }
+
   #navbar-pages a {
-    font-size: 2.5vh;
+    font-size: 1.8vh;
+    letter-spacing: 4px;
   }
 
   .home {
@@ -186,18 +193,26 @@ i:hover {
   #title-section {
     margin-right: 0%; //undo the margin created for desktops
     display: flex;
-    flex: 0.25;
+    flex: 0.7;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
   }
 
   #title-name {
+    margin: 0;
     text-align: center;
   }
 
   #title-mission {
     text-align: center;
+  }
+
+  .icons-section {
+    width: 60vw;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    justify-content: space-between;
   }
 
   #portrait-section {
