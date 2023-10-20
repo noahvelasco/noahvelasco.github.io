@@ -212,7 +212,7 @@ body {
     width: 50vw;
     margin-top: 2vh;
     margin-bottom: 4vh;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   #portrait-section {
@@ -223,7 +223,7 @@ body {
   }
 
   #portrait {
-    max-width: 75%; /* Limit the maximum width to the container's width */
+    max-width: 65%; /* Limit the maximum width to the container's width */
     height: auto; /* Maintain the image's aspect ratio */
   }
 }
