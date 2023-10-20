@@ -46,50 +46,27 @@ body {
   }
 }
 
-#icons-section {
-  position: absolute;
-  right: 0;
-  flex-direction: row;
-  justify-content: center;
-  margin: 4vh 1.5vw 0vh;
-}
-
-i {
-  margin: 0vh 1.5vw 0vh;
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
-}
-
-i:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
 .navbar {
   z-index: 3; /* high z-index value to ensure navbar stays on top */
   position: fixed;
-  bottom: 8%;
+  top: 0;
   right: 0;
+
+  display: flex;
+  justify-content: space-between; /* To space the icons and page refs */
+  align-items: center;
   width: 100%;
+  backdrop-filter: blur(10px);
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.25),
     rgba(27, 27, 27, 1)
   );
   padding: 0.5%;
-  display: flex;
-  justify-content: center; /* To center-align the links */
-  align-items: center;
-  font-family: f2;
-  letter-spacing: 2px;
 }
 
 .navbar a {
   color: white; /* Link text color */
-
   text-decoration: none; /* Remove underlines from links */
   margin: 0 15px; /* Adjust spacing between links */
 }
@@ -102,6 +79,35 @@ i:hover {
 /* mouse over link */
 .navbar a:hover {
   color: #9c715f;
+}
+
+.navbar-pages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0.5vwvw;
+
+  font-family: f2;
+  letter-spacing: 2px;
+}
+
+#navbar-icons {
+  flex-direction: row;
+  margin-left: 5vw;
+}
+
+i {
+  margin: 0vh 0.1vw 0vh;
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+}
+
+i:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .content {
@@ -194,5 +200,10 @@ i:hover {
     flex: 1;
     justify-content: center;
     align-items: flex-start;
+  }
+
+  #portrait {
+    max-width: 75%; /* Limit the maximum width to the container's width */
+    height: auto; /* Maintain the image's aspect ratio */
   }
 }
