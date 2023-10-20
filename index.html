@@ -30,12 +30,12 @@
             </a>
         </div>
 
-        <div class="navbar-pages">
+        <div id="navbar-pages">
             <a href="#home" class="active">home</a>
             <p>/</p>
-            <a href="#about">about</a>
+            <a href="#about" class="btn">about</a>
             <p>/</p>
-            <a href="#work">work</a>
+            <a href="#work" class="btn">work</a>
         </div>
 
 
@@ -43,7 +43,7 @@
 
 
 
-    <!-- HOME SECTION -->
+    <!----------------------------------------------------------------------------------------------- HOME SECTION -->
     <div class="home">
         <div id="title-section">
             <h1 id="title-name">noah velasco</h1>
@@ -60,6 +60,45 @@
             <img id="portrait" src="./media/images/NoahVelasco2023.png" alt="Your Portrait">
         </div>
     </div>
+
+    <!----------------------------------------------------------------------------------------------- ABOUT SECTION -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Add event listeners to the buttons to toggle active class
+        var navbarPages = document.getElementById("navbar-pages");
+        var btns = navbarPages.getElementsByTagName("a");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                // Remove "active" class from all buttons
+                for (var j = 0; j < btns.length; j++) {
+                    btns[j].classList.remove("active");
+                }
+                // Add "active" class to the clicked button
+                this.classList.add("active");
+            });
+        }
+    </script>
+
+
+
+
+
+
 </body>
 
 </html>

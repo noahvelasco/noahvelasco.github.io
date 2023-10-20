@@ -65,7 +65,7 @@ body {
   padding: 0.5%;
 }
 
-.navbar-pages {
+#navbar-pages {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,19 +75,19 @@ body {
   letter-spacing: 2px;
 }
 
-.navbar-pages a {
+#navbar-pages a {
   color: white; /* Link text color */
   text-decoration: none; /* Remove underlines from links */
   margin: 0 1vw; /* Adjust spacing between links */
 }
 
-.navbar-pages a.active {
+#navbar-pages a.active {
   font-weight: bold; /* Example: Make the text bold */
   color: #c0a080; /* Example: Change the text color to red */
 }
 
 /* mouse over link */
-.navbar-pages a:hover {
+#navbar-pages a:hover {
   color: #9c715f;
 }
 
