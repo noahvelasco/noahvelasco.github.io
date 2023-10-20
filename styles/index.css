@@ -48,41 +48,39 @@ body {
 .navbar {
   z-index: 3; /* high z-index value to ensure navbar stays on top */
   position: fixed;
-  top: 0;
-  right: 0;
-
+  top: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* To space the icons and page refs */
-  align-items: center;
+  height: 5%;
   width: 100%;
+  flex-direction: row;
+  justify-content: center; /* To space the icons and page refs */
+  align-items: center;
   backdrop-filter: blur(10px);
   background-image: linear-gradient(
-    to right,
+    to left,
     rgba(255, 255, 255, 0.25),
     rgba(27, 27, 27, 1)
   );
-  padding: 0.5%;
+  padding: 1%;
 }
 
 #navbar-pages {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-right: 0.5vw;
-
-  font-family: f2;
+  justify-content: center;
+  margin: 0;
   letter-spacing: 2px;
 }
 
 #navbar-pages a {
+  font-family: f2;
+  font-size: 2vh;
   color: white; /* Link text color */
   text-decoration: none; /* Remove underlines from links */
   margin: 0 1vw; /* Adjust spacing between links */
 }
 
 #navbar-pages a.active {
-  font-weight: bold; /* Example: Make the text bold */
   color: #c0a080; /* Example: Change the text color to red */
 }
 
@@ -92,8 +90,10 @@ body {
 }
 
 .navbar-icons {
+  position: absolute;
+  right: 3vw;
+  display: flex;
   flex-direction: row;
-  margin-left: 5vw;
 }
 
 i {
@@ -165,12 +165,17 @@ i:hover {
 
   .navbar {
     height: 8%;
-    bottom: 5%;
+    bottom: 0%;
     background-image: linear-gradient(
-      to right,
+      to left,
       rgba(255, 255, 255, 0.5),
+      rgba(27, 27, 27, 0.5),
       rgba(27, 27, 27, 1)
     );
+  }
+
+  #navbar-pages a {
+    font-size: 2.5vh;
   }
 
   .home {
@@ -181,7 +186,7 @@ i:hover {
   #title-section {
     margin-right: 0%; //undo the margin created for desktops
     display: flex;
-    flex: 0.5;
+    flex: 0.25;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
