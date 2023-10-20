@@ -51,10 +51,11 @@ body {
   right: 0;
   flex-direction: row;
   justify-content: center;
+  margin: 4vh 0vw 0vh;
 }
 
 i {
-  margin: 1.5vw 2vw;
+  margin: 0vh 1.5vw 0vh;
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
@@ -68,7 +69,7 @@ i:hover {
 }
 
 .navbar {
-  z-index: 3; /* Set a high z-index value to ensure it stays on top */
+  z-index: 3; /* high z-index value to ensure navbar stays on top */
   position: fixed;
   bottom: 8%;
   right: 0;
