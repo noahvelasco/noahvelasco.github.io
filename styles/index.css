@@ -54,7 +54,7 @@ body {
 }
 
 i {
-  margin: 1.5vw 1.5vw;
+  margin: 1.5vw 2vw;
   white-space: nowrap;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
