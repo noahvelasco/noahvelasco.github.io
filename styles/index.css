@@ -46,6 +46,27 @@ body {
   }
 }
 
+#icons-section {
+  position: absolute;
+  right: 0;
+  flex-direction: row;
+  justify-content: center;
+}
+
+i {
+  margin: 1.5vw 1.5vw;
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+}
+
+i:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
 .navbar {
   z-index: 3; /* Set a high z-index value to ensure it stays on top */
   position: fixed;
@@ -136,6 +157,7 @@ body {
   }
 
   .navbar {
+    height: 8%;
     bottom: 5%;
     background-image: linear-gradient(
       to right,
@@ -151,10 +173,10 @@ body {
 
   #title-section {
     margin-right: 0%; //undo the margin created for desktops
-    flex: 1;
     display: flex;
+    flex: 0.5;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
   }
 
@@ -171,11 +193,5 @@ body {
     flex: 1;
     justify-content: center;
     align-items: flex-start;
-    padding-bottom: 25%;
-  }
-
-  #portrait {
-    width: 75%; /* Set a specific width for smaller screens */
-    height: auto;
   }
 }
