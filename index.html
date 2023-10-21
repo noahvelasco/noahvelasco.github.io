@@ -1,3 +1,10 @@
+<!-- 
+    Noah,
+
+    Remember when building this that this is your digital presence and is not to be taken lightly.
+    A strong digital presence coupled with a sophisticated yet modern style always wins.
+ -->
+
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +18,14 @@
 
 <body>
 
+    <!-- 
+        The responsive design requires I keep these anchor tags ; 
+        borrowed this effect from  Abhishek razy @ https://www.sliderrevolution.com/resources/css-page-transitions/
+    -->
+    <a id="home" class="hidden"></a>
+    <a id="about" class="hidden"></a>
+    <a id="work" class="hidden"></a>
+
     <header class="navbar">
         <nav id="navbar-pages">
             <a href="#home" class="active">home</a>
@@ -20,7 +35,7 @@
     </header>
 
     <!----------------------------------------------------------------------------------------------- HOME SECTION -->
-    <div class="home">
+    <section id="home">
         <div id="title-section">
             <h1 id="title-name">noah velasco</h1>
             <div id="title-mission">
@@ -48,30 +63,48 @@
                         class="fa-brands fa-github"></i>
                 </a>
             </div>
+
         </div>
 
         <div id="portrait-section">
             <img id="portrait" src="./media/images/NoahVelasco2023.png" alt="Your Portrait">
         </div>
-    </div>
+
+    </section>
 
     <!----------------------------------------------------------------------------------------------- ABOUT SECTION -->
 
+    <section id="about">
+        <div id="about-content">
+            <h1>Welcome I'm,</h1>
 
+            <p>
+                A Soldier for Jesus Christ.
+            </p>
+            <p>
+                A Software Engineer.
+            </p>
+            <p>
+                An FPV Pilot.
+            </p>
+            <p>
+                A creator of many things looking to innovate.
+            </p>
+        </div>
+    </section>
 
+    <!----------------------------------------------------------------------------------------------- WORK SECTION -->
 
+    <section id="work">
+        <div id="work-content">
+            <h1>Know me through my work and not as I am. For I aim to create for the betterment of society.</h1>
+            <p>
+                works coming soon...
+            </p>
+        </div>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
+    <!-- This script is to help keep the state of the active page on the nav bar -->
     <script>
         // Add event listeners to the buttons to toggle active class
         var navbarPages = document.getElementById("navbar-pages");
@@ -87,11 +120,6 @@
             });
         }
     </script>
-
-
-
-
-
 
 </body>
 

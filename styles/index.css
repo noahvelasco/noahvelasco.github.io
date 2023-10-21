@@ -21,16 +21,21 @@
 
 /* ------------------------------------- DESKTOP ------------------------------------- */
 
-body {
+body,
+html {
   font-family: f1, f2;
   color: white;
   margin: 0; //removes white space
-  padding: 0; //removes white space
   height: 100vh;
+  overflow: hidden;
 
   background: linear-gradient(75deg, #979797, #1b1b1b);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @keyframes gradient {
@@ -45,10 +50,84 @@ body {
   }
 }
 
+/*%%%%%%%%%% SPECIAL NAV EFFECT %%%%%%%%%%*/
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  z-index: 0;
+  -webkit-transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
+  transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
+
+  margin: 2vh 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about {
+  flex: 1;
+  background: #1b1b1b;
+}
+
+#about h1 {
+  color: #fff;
+  font-weight: bolder;
+}
+
+#about-content {
+  width: 75vw;
+}
+
+#about p {
+  color: #fff;
+  font-weight: lighter;
+  text-align: center;
+}
+
+#work {
+  background: #1b1b1b;
+  flex: 1;
+}
+
+#work h1 {
+  color: #fff;
+  font-weight: bold;
+}
+
+#work-content {
+  width: 75vw;
+}
+
+#work p {
+  color: #c0a080;
+  font-weight: lighter;
+  text-align: center;
+}
+
+a[id="home"]:target ~ #home {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+a[id="about"]:target ~ #about {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+a[id="work"]:target ~ #work {
+  -webkit-transform: translate3d(0, -200%, 0);
+  transform: translate3d(0, -200%, 0);
+}
+
+/*%%%%%%%%%% SPECIAL NAV EFFECT %%%%%%%%%%*/
+
 .navbar {
   z-index: 3; /* high z-index value to ensure navbar stays on top */
   position: fixed;
-  top: auto;
+  top: 0;
   display: flex;
   height: 5%;
   width: 100%;
@@ -91,33 +170,13 @@ body {
   color: #9c715f;
 }
 
-.icons-section {
-  width: 10vw;
-  margin: 2vh 0vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+/* home */
 
-.icons-section a i {
-  white-space: nowrap;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
-}
-
-.icons-section a i:hover {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
-.home {
+#home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the container height to 100% of the viewport height */
 }
 
 #title-section {
@@ -146,6 +205,27 @@ body {
   letter-spacing: 0.25vw;
 }
 
+.icons-section {
+  width: 10vw;
+  margin: 2vh 0vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icons-section a i {
+  white-space: nowrap;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; /* Animation */
+}
+
+.icons-section a i:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
 #portrait-section {
   flex: 1;
   display: flex;
@@ -156,6 +236,8 @@ body {
   height: auto; /* Maintain the image's aspect ratio */
   filter: grayscale(50%);
 }
+
+/* about */
 
 /* ------------------------------------- MOBILE ------------------------------------- */
 
@@ -185,7 +267,9 @@ body {
     letter-spacing: 4px;
   }
 
-  .home {
+  /* home */
+
+  #home {
     display: flex;
     flex-direction: column;
   }
@@ -226,4 +310,6 @@ body {
     max-width: 65%; /* Limit the maximum width to the container's width */
     height: auto; /* Maintain the image's aspect ratio */
   }
+
+  /* about */
 }
