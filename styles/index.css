@@ -31,7 +31,7 @@ html {
 
   background: linear-gradient(75deg, #979797, #1b1b1b);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 10s ease infinite;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -72,19 +72,21 @@ section {
   background: #1b1b1b;
 }
 
+#about-content {
+  width: 75vw;
+}
+
 #about h1 {
   color: #fff;
   font-weight: bolder;
-}
-
-#about-content {
-  width: 75vw;
+  padding-bottom: 5vh;
 }
 
 #about p {
   color: #fff;
   font-weight: lighter;
   text-align: center;
+  word-spacing: 2px;
 }
 
 #work {
