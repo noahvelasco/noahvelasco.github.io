@@ -79,6 +79,7 @@ section {
 #about h1 {
   color: #fff;
   font-weight: bolder;
+  letter-spacing: 3px;
   padding-bottom: 5vh;
 }
 
@@ -94,13 +95,13 @@ section {
   flex: 1;
 }
 
-#work h1 {
-  color: #fff;
-  font-weight: bold;
-}
-
 #work-content {
   width: 75vw;
+}
+
+#work h1 {
+  color: #fff;
+  font-weight: lighter;
 }
 
 #work p {
@@ -136,7 +137,7 @@ a[id="work"]:target ~ #work {
   flex-direction: row;
   justify-content: center; /* To space the icons and page refs */
   align-items: center;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
   background-image: linear-gradient(
     to left,
     rgba(255, 255, 255, 0.25),
@@ -196,6 +197,7 @@ a[id="work"]:target ~ #work {
   font-family: f2;
   text-shadow: 2px 2px 8px #1b1b1b;
   font-style: italic;
+  font-weight: lighter;
   letter-spacing: 0.5vw;
 }
 
@@ -254,9 +256,8 @@ a[id="work"]:target ~ #work {
     bottom: 0%;
     background-image: linear-gradient(
       to left,
-      rgba(255, 255, 255, 0.5),
-      rgba(27, 27, 27, 0.5),
-      rgba(27, 27, 27, 0.5)
+      rgba(255, 255, 255, 0.1),
+      rgba(27, 27, 27, 1)
     );
   }
 
