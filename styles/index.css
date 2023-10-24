@@ -29,6 +29,7 @@ html {
   height: 100vh;
   overflow: hidden;
 
+  /* Below is home animation background gradient */
   background: linear-gradient(75deg, #979797, #1b1b1b);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -50,80 +51,7 @@ html {
   }
 }
 
-/*%%%%%%%%%% SPECIAL NAV EFFECT %%%%%%%%%%*/
-
-section {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  z-index: 0;
-  -webkit-transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
-  transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#about {
-  flex: 1;
-  background: #1b1b1b;
-}
-
-#about-content {
-  width: 75vw;
-}
-
-#about-content h1 {
-  color: #fff;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  padding-bottom: 2vh;
-}
-
-#about-content p {
-  color: #fff;
-  font-weight: lighter;
-  text-align: center;
-  word-spacing: 1px;
-}
-
-#work {
-  background: #1b1b1b;
-  flex: 1;
-}
-
-#work-content {
-  width: 75vw;
-}
-
-#work-content h1 {
-  color: #fff;
-  font-weight: lighter;
-}
-
-#work-content p {
-  color: #c0a080;
-  font-weight: lighter;
-  text-align: center;
-}
-
-a[id="home"]:target ~ #home {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-a[id="about"]:target ~ #about {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-
-a[id="work"]:target ~ #work {
-  -webkit-transform: translate3d(0, -200%, 0);
-  transform: translate3d(0, -200%, 0);
-}
-
-/*%%%%%%%%%% SPECIAL NAV EFFECT %%%%%%%%%%*/
+/* Fixed Nav Bar  */
 
 .navbar {
   z-index: 3; /* high z-index value to ensure navbar stays on top */
@@ -166,12 +94,37 @@ a[id="work"]:target ~ #work {
   color: #c0a080; /* Example: Change the text color to red */
 }
 
-/* mouse over link */
 #navbar-pages a:hover {
   color: #9c715f;
 }
 
-/* home */
+/*%%%%%%%%%% SPECIAL PAGE NAV EFFECT START %%%%%%%%%%*/
+
+section {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  -webkit-transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
+  transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
+}
+
+a[id="home"]:target ~ #home {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+a[id="about"]:target ~ #about {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+a[id="work"]:target ~ #work {
+  -webkit-transform: translate3d(0, -200%, 0);
+  transform: translate3d(0, -200%, 0);
+}
+/*%%%%%%%%%% SPECIAL PAGE NAV EFFECT END %%%%%%%%%%*/
+
+/* home page */
 
 #home {
   display: flex;
@@ -194,7 +147,6 @@ a[id="work"]:target ~ #work {
   font-size: 5vh;
   font-family: f2;
   text-shadow: 2px 2px 8px #1b1b1b;
-  /* font-style: italic; */
   font-weight: lighter;
   letter-spacing: 0.5vw;
 }
@@ -239,7 +191,64 @@ a[id="work"]:target ~ #work {
   filter: grayscale(50%);
 }
 
-/* about */
+/* about page */
+
+#about {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #1b1b1b;
+}
+
+#about-content {
+  width: 75vw;
+}
+
+#about-content h1 {
+  color: #fff;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding-bottom: 2vh;
+}
+
+#about-content p {
+  color: #fff;
+  font-weight: lighter;
+  text-align: center;
+  word-spacing: 1px;
+}
+
+/* work page */
+
+#work {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #1b1b1b;
+}
+
+#work-content {
+  width: 75vw;
+}
+
+#work-content h1 {
+  color: #fff;
+  font-weight: lighter;
+}
+
+#work-content p {
+  color: #c0a080;
+  font-weight: lighter;
+  text-align: center;
+}
+
+/* Work Page Project Gallery/Carousel */
 
 /* ------------------------------------- MOBILE ------------------------------------- */
 
