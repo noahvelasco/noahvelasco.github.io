@@ -243,6 +243,11 @@ section {
   height: auto;
 }
 
+#wide-portrait {
+  max-width: 100%;
+  height: auto;
+}
+
 #proj-desc {
   flex: 1;
   height: 100%;
@@ -287,7 +292,9 @@ section {
 .slider-nav {
   margin-top: 10px;
   display: flex;
-  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  /* column-gap: 0.1rem; */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -295,11 +302,10 @@ section {
 }
 
 .slider-nav a {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
+  width: 1.75rem;
+  height: 0.1rem;
   background-color: #ffffff;
-  opacity: 0.75;
+  opacity: 0.25;
   transition: opacity ease 250ms;
 }
 
@@ -312,6 +318,21 @@ section {
 .slider-nav a.active {
   background-color: #c0a080; /* Change this to the color you want for filled dots */
   opacity: 1;
+}
+
+.slider-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; /* Adjust the width as needed */
+  height: 2rem; /* Adjust the height as needed */
+  cursor: pointer;
+  margin: 0.2rem; /* Adjust the margin as needed */
+}
+
+.slider-arrow i {
+  color: #ffffff; /* Icon color */
+  font-size: 1.3rem; /*Adjust the font size as needed*/
 }
 
 /* ------------------------------------- MOBILE ------------------------------------- */

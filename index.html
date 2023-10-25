@@ -153,10 +153,47 @@
                     </div>
                 </div>
 
+                <!-- slide -->
+                <div class="slide" id="slide-3">
+                    <div id="proj-img">
+                        <img src="./media/images/mockups/oksee_mockup.png" alt="OKSEE mockup" class="img-responsive"
+                            id="wide-portrait">
+                    </div>
+                    <div id="proj-desc">
+                        <div id="proj-desc-text">
+                            <h1>OKSEE</h1>
+                            <p>
+                                Built for mobile and web, OKSEE is to find the best eateries in Oklahoma City, OK for
+                                you. Vital traveling and weather information OKSEE uses both API's: Google Maps and
+                                Open
+                                Weather
+                                Map.
+                            </p>
+                        </div>
+                        <div id="proj-desc-metadata">
+                            <a target="_blank" rel="noreferrer"><img
+                                    src="https://www.vectorlogo.zone/logos/expoio/expoio-icon.svg" alt="flutter"
+                                    class="tech-stack-icon" /></a>
+                            <a target="_blank" rel="noreferrer"><img
+                                    src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="flutter"
+                                    class="tech-stack-icon" /></a>
+                            <a target="_blank" rel="noreferrer"><img
+                                    src="https://upload.vectorlogo.zone/logos/nextjs/images/60eff509-53dd-4280-92e7-7318fa02e934.svg"
+                                    alt="nextjs" class="tech-stack-icon" /></a>
+                            <a target="_blank" rel="noreferrer"> <img
+                                    src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                                    alt="tailwind" class="tech-stack-icon" /></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="slider-nav">
+                <div class="slider-arrow left-arrow" id="left-arrow"><i class="fas fa-chevron-left"></i></div>
                 <a href="#slide-1" class="active"></a>
                 <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <div class="slider-arrow right-arrow" id="right-arrow"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
     </section>
@@ -200,6 +237,45 @@
                 }
             });
         });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get slider and arrow elements
+            const slider = document.querySelector(".slider");
+            const leftArrow = document.getElementById("left-arrow");
+            const rightArrow = document.getElementById("right-arrow");
+
+            // Add click event listener for the left arrow
+            leftArrow.addEventListener("click", function () {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.offsetWidth;
+
+                // Calculate the previous slide's scroll position
+                const targetScroll = Math.max(scrollLeft - slideWidth, 0);
+
+                // Scroll to the previous slide
+                slider.scrollTo({
+                    left: targetScroll,
+                    behavior: "smooth"
+                });
+            });
+
+            // Add click event listener for the right arrow
+            rightArrow.addEventListener("click", function () {
+                const scrollLeft = slider.scrollLeft;
+                const slideWidth = slider.offsetWidth;
+
+                // Calculate the next slide's scroll position
+                const targetScroll = Math.min(scrollLeft + slideWidth, slider.scrollWidth - slider.clientWidth);
+
+                // Scroll to the next slide
+                slider.scrollTo({
+                    left: targetScroll,
+                    behavior: "smooth"
+                });
+            });
+        });
+
 
 
     </script>
