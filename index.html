@@ -25,14 +25,6 @@
 
 <body>
 
-    <!-- 
-        The responsive design requires I keep these anchor tags ; 
-        borrowed this effect from  Abhishek razy @ https://www.sliderrevolution.com/resources/css-page-transitions/
-    -->
-    <a id="home" class="hidden"></a>
-    <a id="about" class="hidden"></a>
-    <a id="work" class="hidden"></a>
-
     <header class="navbar">
         <nav id="navbar-pages">
             <a href="#home" class="active">home</a>
@@ -45,7 +37,7 @@
     <section id="home">
         <div id="title-section">
             <h1 id="title-name">
-                <span style="color: #c0a080;"></span>Noah <span style="color: #c0a080;"></span>Velasco
+                Noah Velasco
             </h1>
             <div id="title-mission">
                 <p>
@@ -85,8 +77,6 @@
 
     <section id="about">
         <div id="about-content">
-            <h1>Welcome, <span style="color: #c0a080;">I'm</span></h1>
-
             <p>
                 A Soldier for Jesus Christ.
             </p>
@@ -99,24 +89,76 @@
             <p>
                 A creator of many things looking to innovate.
             </p>
+
+            <!-- <h1>
+                Know me through my works - for I aim to create for the betterment of all.
+            </h1> -->
         </div>
     </section>
 
     <!----------------------------------------------------------------------------------------------- WORK SECTION -->
-
     <section id="work">
-        <div id="work-content">
-            <h1>
-                Know me through my works - for I aim to create for the betterment of all.
-            </h1>
-            <p>
-                works coming soon...
-            </p>
+
+        <div class="slider-wrapper">
+            <div class="slider">
+
+                <!-- The structure of the 'slide' must never be compromised as it is configured as necessary -->
+                <div class="slide" id="slide-1">
+                    <div id="proj-img">
+                        <img src="./media/images/mockups/campusbase_mockup.png" alt="cb mockup" class="img-responsive">
+                    </div>
+                    <div id="proj-desc">
+                        <div id="proj-desc-text">
+                            <h1>Campus Base</h1>
+                            <p>
+                                Built to break down the barriers to campus accessibility, and empower
+                                students with disabilities to navigate campus confidently and independently.
+                            </p>
+                        </div>
+                        <div id="proj-desc-metadata">
+                            <a href="" target="_blank" rel="noreferrer"><img
+                                    src="https://www.vectorlogo.zone/logos/expoio/expoio-icon.svg" alt="flutter"
+                                    class="tech-stack-icon" /></a>
+                            <a href="" target="_blank" rel="noreferrer"><img
+                                    src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="flutter"
+                                    class="tech-stack-icon" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide -->
+                <div class="slide" id="slide-2">
+                    <div id="proj-img">
+                        <img src="./media/images/mockups/ava_mockup.png" alt="ava mockup" class="img-responsive">
+                    </div>
+                    <div id="proj-desc">
+                        <div id="proj-desc-text">
+                            <h1>AVA</h1>
+                            <p>
+                                Built to answer any question and to talk to you using the natural
+                                tonality of a human voice with the two reigning AI's in AGI and Text-To-Speech:
+                                <strong>ChatGPT</strong> & <strong>ElevenLabs Text-To-Speech</strong>.
+                            </p>
+                        </div>
+                        <div id="proj-desc-metadata">
+                            <a href="https://flutter.dev" target="_blank" rel="noreferrer"><img
+                                    src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter"
+                                    class="tech-stack-icon" /></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1" class="active"></a>
+                <a href="#slide-2"></a>
+            </div>
         </div>
     </section>
 
-    <!-- This script is to help keep the state of the active page on the nav bar -->
     <script>
+
+        //Below 10 lines are to help keep the state of the active page on the fixed nav bar -->
         // Add event listeners to the buttons to toggle active class
         var navbarPages = document.getElementById("navbar-pages");
         var btns = navbarPages.getElementsByTagName("a");
@@ -130,6 +172,31 @@
                 this.classList.add("active");
             });
         }
+
+
+
+
+        //Below 13 lines are to help keep the state of the active slide on the project slider in the work section -->
+        const slider = document.querySelector('.slider');
+        const dots = document.querySelectorAll('.slider-nav a');
+
+        slider.addEventListener('scroll', () => {
+            const scrollLeft = slider.scrollLeft;
+
+            // Calculate the index of the currently visible slide
+            const currentIndex = Math.round(scrollLeft / window.innerWidth);
+
+            // Update the active dot
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+
     </script>
 
 </body>

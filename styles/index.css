@@ -1,4 +1,4 @@
-//This file contains both the desktop and mobile css styling for all pages
+/* This file contains both the desktop and mobile css styling for all pages */
 
 @font-face {
   font-family: f1;
@@ -23,11 +23,12 @@
 
 body,
 html {
-  font-family: f1, f2;
+  font-family: f1, "Montserrat", f2;
   color: white;
-  margin: 0; //removes white space
+  margin: 0; /*removes white space*/
   height: 100vh;
   overflow: hidden;
+  scroll-behavior: smooth; /* Add this property for smooth scrolling */
 
   /* Below is home animation background gradient */
   background: linear-gradient(75deg, #979797, #1b1b1b);
@@ -98,31 +99,11 @@ html {
   color: #9c715f;
 }
 
-/*%%%%%%%%%% SPECIAL PAGE NAV EFFECT START %%%%%%%%%%*/
-
 section {
   height: 100vh;
   width: 100vw;
-  z-index: 0;
-  -webkit-transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
-  transition: transform 0.45s cubic-bezier(0, 0, 0.21, 1);
+  /* z-index: 0; */
 }
-
-a[id="home"]:target ~ #home {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-a[id="about"]:target ~ #about {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-
-a[id="work"]:target ~ #work {
-  -webkit-transform: translate3d(0, -200%, 0);
-  transform: translate3d(0, -200%, 0);
-}
-/*%%%%%%%%%% SPECIAL PAGE NAV EFFECT END %%%%%%%%%%*/
 
 /* home page */
 
@@ -218,6 +199,7 @@ a[id="work"]:target ~ #work {
   color: #fff;
   font-weight: lighter;
   text-align: center;
+  line-height: 3;
   word-spacing: 1px;
 }
 
@@ -229,33 +211,136 @@ a[id="work"]:target ~ #work {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background: #1b1b1b;
 }
 
-#work-content {
-  width: 75vw;
+.slider-wrapper {
+  height: 75vh;
+  width: 100vw;
+  position: relative;
+  border-radius: 10px;
 }
 
-#work-content h1 {
-  color: #fff;
-  font-weight: lighter;
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
-#work-content p {
-  color: #c0a080;
-  font-weight: lighter;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider div {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#proj-img {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-responsive {
+  max-width: 40%;
+  height: auto;
+}
+
+#proj-desc {
+  flex: 1;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+#proj-desc-text {
+  flex: 0.7;
+  padding: 0vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  font-weight: lighter;
 }
 
-/* Work Page Project Gallery/Carousel */
+#proj-desc-text p {
+  line-height: 3;
+}
+
+#proj-desc-metadata {
+  flex: 0.3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-size: 2vh;
+}
+
+.tech-stack-icon {
+  max-width: 10vw;
+  padding: 0 0.5vw;
+  height: auto;
+  color: gray;
+}
+
+/* slider nav*/
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+/* Styles for filled navigation dots when their corresponding slide is targeted */
+.slider-nav a:target,
+.slider-nav a.active {
+  background-color: #c0a080; /* Change this to the color you want for filled dots */
+  opacity: 1;
+}
 
 /* ------------------------------------- MOBILE ------------------------------------- */
 
 @media (max-width: 1000px) {
   body {
-    margin: 0; //removes white space
-    padding: 0; //removes white space
+    margin: 0; /*removes white space*/
+    padding: 0; /*removes white space*/
   }
 
   .navbar {
@@ -285,7 +370,7 @@ a[id="work"]:target ~ #work {
   }
 
   #title-section {
-    margin-right: 0%; //undo the margin created for desktops
+    margin-right: 0%; /*undo the margin created for desktops*/
     display: flex;
     flex: 0.65;
     flex-direction: column;
@@ -322,4 +407,27 @@ a[id="work"]:target ~ #work {
   }
 
   /* about */
+
+  /* work */
+  .slide {
+    flex-direction: column; /* MOBILE - CHANGE THIS TO COLUMN*/
+  }
+
+  .img-responsive {
+    max-width: 30%;
+    height: auto;
+  }
+
+  #proj-desc-text {
+    padding: 0vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #proj-desc-text p {
+    line-height: 1.25;
+  }
 }
