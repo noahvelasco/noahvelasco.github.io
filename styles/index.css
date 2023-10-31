@@ -31,7 +31,7 @@ html {
   scroll-behavior: smooth; /* Add this property for smooth scrolling */
 
   /* Below is home animation background gradient */
-  background-image: linear-gradient(to bottom, #979797, #1b1b1b);
+  background-image: linear-gradient(to top, #979797, #4d4d4d, #1b1b1b);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,12 +50,6 @@ html {
   flex-direction: row;
   justify-content: center; /* To space the icons and page refs */
   align-items: center;
-  backdrop-filter: blur(50px);
-  background-image: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.25),
-    rgba(27, 27, 27, 1)
-  );
   padding: 1%;
 }
 
@@ -65,7 +59,6 @@ html {
   flex-direction: row;
   justify-content: center;
   margin: 0;
-  letter-spacing: 2px;
 }
 
 #navbar-pages a {
@@ -79,10 +72,11 @@ html {
 
 #navbar-pages a.active {
   color: #c0a080; /* Example: Change the text color to red */
+  /* text-shadow: 1px 1px #000000; */
 }
 
 #navbar-pages a:hover {
-  color: #9c715f;
+  color: #c0a080;
 }
 
 section {
@@ -286,6 +280,7 @@ section {
 #pub-list a {
   color: white;
   text-decoration: underlines;
+  text-underline-offset: 3px;
   text-align: left;
   line-height: 2;
 }
@@ -313,13 +308,13 @@ section {
 .slider-nav a {
   width: 1.75rem;
   height: 0.1rem;
-  background-color: #ffffff;
+  background-color: #1b1b1b;
   opacity: 0.25;
-  transition: opacity ease 250ms;
+  transition: ease 800ms;
 }
 
 .slider-nav a:hover {
-  opacity: 1;
+  opacity: 0.75;
 }
 
 /* Styles for filled navigation dots when their corresponding slide is targeted */
@@ -355,11 +350,6 @@ section {
   .navbar {
     height: 8vh;
     bottom: 0%;
-    background-image: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0.1),
-      rgba(27, 27, 27, 1)
-    );
   }
 
   #navbar-pages {
