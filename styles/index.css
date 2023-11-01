@@ -418,7 +418,7 @@ section {
   }
 
   #proj-desc-text {
-    padding: 0vh 1vw;
+    /* padding: 0vh 1vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -450,15 +450,15 @@ section {
   .right-arrow {
     position: relative;
     z-index: 3;
-    top: 60vh;
-    left: 10vw;
+    top: 46vh;
+    left: 15vw;
   }
 
   .left-arrow {
     position: relative;
     z-index: 3;
-    top: 60vh;
-    right: 10vw;
+    top: 46vh;
+    right: 15vw;
   }
 
   #pub-list ul,
