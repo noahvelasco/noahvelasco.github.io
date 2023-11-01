@@ -426,6 +426,10 @@ section {
     text-align: center;
   }
 
+  #proj-desc-text h1 {
+    font-weight: lighter;
+  }
+
   #proj-desc-text p {
     line-height: 1.25;
   }
@@ -440,6 +444,8 @@ section {
   }
 
   .slider-nav a {
+    pointer-events: none;
+    cursor: default;
     background-color: #979797;
   }
 
