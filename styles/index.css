@@ -430,6 +430,37 @@ section {
     line-height: 1.25;
   }
 
+  /* slider nav*/
+  .slider-nav {
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  .slider-nav a {
+    background-color: #979797;
+  }
+
+  .slider-arrow {
+    /* background: red; */
+  }
+
+  .right-arrow {
+    position: relative;
+    z-index: 3;
+    top: 60vh;
+    left: 10vw;
+  }
+
+  .left-arrow {
+    position: relative;
+    z-index: 3;
+    top: 60vh;
+    right: 10vw;
+  }
+
   #pub-list ul,
   #pub-list li,
   #pub-list a {
