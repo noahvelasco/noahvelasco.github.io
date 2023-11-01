@@ -261,6 +261,10 @@ section {
   font-weight: lighter;
 }
 
+#proj-desc-text h1 {
+  font-weight: lighter;
+}
+
 #proj-desc-text p {
   line-height: 3;
 }
@@ -424,10 +428,6 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  #proj-desc-text h1 {
-    font-weight: lighter;
   }
 
   #proj-desc-text p {
