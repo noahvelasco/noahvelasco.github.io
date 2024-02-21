@@ -1,0 +1,104 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #282828;
+  background-image: url("/assets/images/backdrop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+
+  /* border: 2px solid #00c803; //for debugging */
+}
+
+.section {
+  height: 65vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  /* border: 4px solid #7800f8; //for debugging */
+}
+
+#title {
+  font-size: 3vw;
+  font-weight: 100;
+}
+
+#title-em {
+  font-size: 3.5vw;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#content {
+  font-size: 1vw;
+  font-weight: 300;
+}
+
+#back {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+  }
+  50% {
+    text-shadow: 0 0 30px #fff, 0 0 60px #fff, 0 0 120px #fff, 0 0 240px #fff;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+  }
+}
+
+/* Mobile Styling  */
+@media (max-width: 750px) {
+  .section {
+    height: 50vh;
+    width: 85vw;
+    margin-bottom: 15vh;
+    /* border: 4px solid #7800f8; //for debugging */
+  }
+
+  #title {
+    font-size: 6vw;
+    /* font-weight: 100;
+    padding-left: 3vw; */
+    /* margin-bottom: -3em; */
+    /* border: 3px solid #bbb; //for debugging */
+  }
+  #title-em {
+    font-size: 8vw;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  #content {
+    font-size: 3vw;
+    font-weight: 200;
+    padding-left: 1vw;
+    /* margin-bottom: 0.5vh; */
+    /* border: 3px solid #bbb; //for debugging */
+  }
+
+  #back {
+    font-size: 3vw;
+    text-decoration: none;
+    color: white;
+  }
+}

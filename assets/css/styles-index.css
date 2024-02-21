@@ -1,0 +1,180 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #282828;
+  background-image: url("/assets/images/backdrop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+
+  /* border: 2px solid #00c803; //for debugging */
+}
+
+.section {
+  height: 100vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* border: 4px solid #7800f8; //for debugging */
+}
+
+#title-name {
+  font-size: 2vw;
+  font-weight: 100;
+  padding-left: 1.75vw;
+  margin-bottom: -3em;
+  /* border: 3px solid #bbb; //for debugging */
+}
+
+#title-portfolio {
+  font-size: 8vw;
+  font-weight: 200;
+  padding-left: 1vw;
+  margin-bottom: 0.5vh;
+  /* border: 3px solid #bbb; //for debugging */
+}
+
+.divider {
+  width: 100%; /* section takes up 100% of the section its in*/
+  border-top: 1px solid #ffffff;
+}
+
+.nav-sect {
+  margin-top: 2vh;
+  width: 25vw;
+  /* border: 3px solid #bbb; //for debugging */
+}
+
+.nav-sect ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  /* border: 3px solid #bbb; //for debugging */
+}
+
+.nav-sect li {
+  font-size: 1vw;
+  font-weight: 200;
+  padding-left: 1.5vw;
+  /* border: 3px solid #bbb; //for debugging */
+}
+
+.nav-sect a {
+  text-decoration: none;
+  color: #ffffff; /* Inherit color from parent */
+}
+
+/* ----- link hover animation settings start ----- */
+.nav-sect ul li a {
+  position: relative;
+}
+.nav-sect ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+.nav-sect ul li a:hover:after {
+  width: 100%;
+}
+
+.nav-sect ul li a,
+.nav-sect ul li a:after,
+.nav-sect ul li a:before {
+  transition: all 0.25s ease-in-out;
+}
+.nav-sect ul li a:hover {
+  /* font-weight: 600; */
+}
+
+/* ----- link hover animation settings end ----- */
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+  }
+  50% {
+    text-shadow: 0 0 30px #fff, 0 0 60px #fff, 0 0 120px #fff, 0 0 240px #fff;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 160px #fff;
+  }
+}
+
+/* Mobile Styling  */
+@media (max-width: 1000px) {
+  .section {
+    height: 65vh;
+    width: 85vw;
+
+    /* border: 4px solid #7800f8; //for debugging */
+  }
+
+  #title-name {
+    font-size: 5vw;
+    font-weight: 100;
+    padding-left: 3vw;
+    margin-bottom: -3em;
+    /* border: 3px solid #bbb; //for debugging */
+  }
+
+  #title-portfolio {
+    font-size: 18vw;
+    font-weight: 200;
+    padding-left: 1vw;
+    margin-bottom: 0.5vh;
+    /* border: 3px solid #bbb; //for debugging */
+  }
+
+  .divider {
+    width: 100%; /* section takes up 100% of the section its in*/
+    border-top: 1px solid #ffffff;
+  }
+
+  .nav-sect {
+    display: flex;
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+    flex-direction: column; /* Stack the items vertically */
+    padding-top: 2vh;
+    width: 100%; /* Occupy the full width of the section */
+  }
+
+  .nav-sect ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center the items horizontally */
+  }
+
+  .nav-sect li {
+    font-size: 5vw;
+    padding: 1.5vw;
+    margin-top: 4vh;
+  }
+}
