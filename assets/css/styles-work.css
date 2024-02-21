@@ -24,6 +24,7 @@ body {
 }
 
 .section {
+  padding-top: 10vh;
   height: 80vh;
   width: 25vw;
 
@@ -114,9 +115,8 @@ ul li a:hover {
 }
 
 /* Mobile Styling  */
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
   .section {
-    padding-top: 10vh;
     width: 85vw;
     /* border: 4px solid #7800f8; //for debugging */
   }
